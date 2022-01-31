@@ -1,0 +1,104 @@
+<html>
+<body>
+  <div class="login">
+  <h3> Serie A Match Winning Prediction</h3>
+      <form action="{{ url_for('predict')}}"method="post">
+<table>
+
+<tr><td>HomeTeam</td>
+<td><select name="HomeTeam" id="HomeTeam">
+<option value="22">Torino</option>
+<option value="15">Milan</option>
+<option value="4">Cagliari</option>
+<option value="21">Sassuolo</option>
+<option value="8">Fiorentina</option>
+<option value="20">Sampdoria</option>
+<option value="19">Salernitana</option>
+<option value="23">Udinese</option>
+<option value="10">Genoa</option>
+<option value="0">Atalanta</option>
+<option value="16">Napoli</option>
+<option value="13">Lazio</option>
+<option value="11">Inter</option>
+<option value="18">Roma</option>
+<option value="12">Juventus</option>
+<option value="2">Bologna</option>
+<option value="17">Parma</option>
+<option value="5">Chievo</option>
+<option value="7">Empoli</option>
+<option value="9">Frosinone</option>
+<option value="24">Verona</option>
+<option value="14">Lecce</option>
+<option value="3">Brescia</option>
+<option value="6">Crotone</option>
+<option value="1">Benevento</option>
+</td></tr>
+<tr><td>AwayTeam</td>
+<td><select name="AwayTeam" id="AwayTeam">
+<option value="22">Torino</option>
+<option value="15">Milan</option>
+<option value="4">Cagliari</option>
+<option value="21">Sassuolo</option>
+<option value="8">Fiorentina</option>
+<option value="20">Sampdoria</option>
+<option value="19">Salernitana</option>
+<option value="23">Udinese</option>
+<option value="10">Genoa</option>
+<option value="0">Atalanta</option>
+<option value="16">Napoli</option>
+<option value="13">Lazio</option>
+<option value="11">Inter</option>
+<option value="18">Roma</option>
+<option value="12">Juventus</option>
+<option value="2">Bologna</option>
+<option value="17">Parma</option>
+<option value="5">Chievo</option>
+<option value="7">Empoli</option>
+<option value="9">Frosinone</option>
+<option value="24">Verona</option>
+<option value="14">Lecce</option>
+<option value="3">Brescia</option>
+<option value="6">Crotone</option>
+<option value="1">Benevento</option>
+</td></tr>
+<tr><td>Full Time Home Goals</td>
+<td><input type="number" name="FTHG"/>
+</td></tr>
+<tr><td>Full Time Away Goals</td>
+<td><input type="number" name="FTAG"/>
+</td></tr>
+<tr><td>Home Team Shots</td>
+<td><input type="number" name="HS"/>
+</td></tr>
+<tr><td>Away Team Shots</td>
+<td><input type="number" name="AS"/>
+</td></tr>
+<tr><td>Home Team Shot on Target</td>
+<td><input type="number" name="HST"/>
+</td></tr>
+<tr><td>Away Team Shot on Target</td>
+<td><input type="number" name="AST"/>
+</td></tr>
+<tr><td>Home Team Corner</td>
+<td><input type="number" name="HC"/>
+</td></tr>
+<tr><td>Away Team Corner</td>
+<td><input type="number" name="AC"/>
+</td></tr>
+<tr><td>Home Team Red Card</td>
+<td><input type="number" name="HR"/>
+</td></tr>
+<tr><td>Away Team Red Card</td>
+<td><input type="number" name="AR">
+</td></tr>
+</table>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+   </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
